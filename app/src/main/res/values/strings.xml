@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">Bookkeeping King</string>
+    <string name="app_logo_description">BK with a crown on top</string>
+
+    <!--Start screen/activity -->
+    <string name="logInbutton">Log In</string>
+    <string name="signUp">Sign Up</string>
+
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="reenterPassword">Reenter Password</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="accountant">Bookkeeper (Accountant)</string>
+    <string name="businessOwner">Business Owner</string>
+    <string name="signInDescription">Sign in to continue</string>
+    <!--Home screen-->
+    <string name="action_settings">Settings</string>
+    <string name="calenderButton">Calender</string>
+    <string name="invoicesButton">Invoices</string>
+    <string name="employeesButton">Employees</string>
+    <string name="salesTaxButton">Sales Tax</string>
+    <string name="payrollButton">Payroll</string>
+
+    <!--Payroll screen-->
+    <string name="employeeDesc">Employee</string>
+    <string name="numOfHrsWrkdDesc">Number of Hours Worked</string>
+    <string name="hrlPayDesc">Hourly Pay</string>
+    <string name="checkDtDesc">Check Date</string>
+    <string name="endPerDate">Ending Period Date</string>
+
+    <string name="calculateButton">Calculate</string>
+    <string name="empName">Employee Name</string>
+    <string name="grossAmt">Gross Amount</string>
+    <string name="checkNum">Check #</string>
+    <string name="netPay">Net Pay</string>
+
+    <string name="deductions">Deductions</string>
+    <string name="federalIncomeTax">Federal Income Tax</string>
+    <string name="socialSecurity">Social Security</string>
+    <string name="medicare">Medicare</string>
+    <string name="stateIncomeTax">State Income Tax</string>
+    <string name="stateDisabilityInsurance">State Disability Insurance</string>
+
+    <!--Invoices screen-->
+    <string name="buttonAddInvoice">New Invoice</string>
+    <string name="buttonEditInvoice">Edit/View Invoice</string>
+    <string name="addInvoice">Add Invoice</string>
+    <string name="editInvoice">Edit Invoice</string>
+    <string name="vendorID">Vendor ID:</string>
+    <string name="invoiceDate">Invoice Date:</string>
+    <string name="invoiceNumber">Invoice Number:</string>
+    <string name="item">Item:</string>
+    <string name="glAccount">GL Account:</string>
+    <string name="totalInvoice">Total Invoice</string>
+    <string name="paymentMethod">Payment Method</string>
+
+    <!--Employees screen-->
+    <string name="addEmployee">Add New Employee</string>
+    <string name="editEmployee">Edit Employee Info</string>
+
+    <!--Sales Tax screen-->
+    <string name="salexTaxTitle">Sales Tax Calculator</string>
+    <string name="totalMonthlyTaxableRevenue">Total Monthly Taxable Revenue</string>
+    <string name="countyOfSalesTaxRate">County Of Sales TaxRate</string>
+    <string name="calculate">Calculate</string>
+    <string name="totalSalexTax">Total Sales Tax Payment for the month:</string>
+
+    <!--Should find out if this is necessary-->
+    <string name="title_activity_add_invoice">addInvoice</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="saveButton">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="uploadInvoice">Upload Invoice</string>
+    <string-array name="Employees">
+        <item>Evan Johnson</item>
+        <item>Fadi Nakkound</item>
+        <item>Drew Finnegan</item>
+        <item>Ken Ryan</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="invoice">Invoice:</string>
+    <string name="isTaxDeductibleText">Is Tax Deductible?</string>
+    <!-- Sign Up/ Log In screen-->
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="signUpDescription">Sign up to continue</string>
+</resources>

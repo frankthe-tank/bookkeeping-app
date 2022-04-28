@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddInvoiceFragment" >
+
+    <TextView
+        android:id="@+id/file"
+        android:layout_width="136dp"
+        android:layout_height="23dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:text="No file chosen."
+        android:textSize="18dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonUploadInvoice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonUploadInvoice"
+        app:layout_constraintTop_toTopOf="@+id/buttonUploadInvoice"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/isTaxDeductibleText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/isTaxDeductibleText"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/switchTaxDeductibleAdd"
+        app:layout_constraintStart_toStartOf="@+id/invoiceNumber"
+        app:layout_constraintTop_toTopOf="@+id/switchTaxDeductibleAdd" />
+
+    <Switch
+        android:id="@+id/switchTaxDeductibleAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/editTextInvoiceNum"
+        app:layout_constraintTop_toBottomOf="@+id/editTextInvoiceNum" />
+
+    <Spinner
+        android:id="@+id/spinnerPaymentMethodEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/buttonUploadInvoice"
+        app:layout_constraintEnd_toEndOf="@+id/editTextInvoiceTotal"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextInvoiceTotal"
+        app:layout_constraintTop_toBottomOf="@+id/editTextInvoiceTotal" />
+
+    <Spinner
+        android:id="@+id/spinnerItemEdit"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerGlEdit"
+        app:layout_constraintEnd_toEndOf="@+id/editTextInvoiceNum"
+        app:layout_constraintStart_toStartOf="@+id/editTextInvoiceNum"
+        app:layout_constraintTop_toBottomOf="@+id/switchTaxDeductibleAdd" />
+
+    <Spinner
+        android:id="@+id/spinnerGlEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/editTextInvoiceTotal"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerItemEdit"
+        app:layout_constraintStart_toStartOf="@+id/spinnerItemEdit"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerItemEdit" />
+
+    <TextView
+        android:id="@+id/addInvoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/addInvoice"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerVendorIdEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/vendorID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/vendorID"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerVendorIdEdit"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerVendorIdEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinnerVendorIdEdit" />
+
+    <Spinner
+        android:id="@+id/spinnerVendorIdEdit"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextInvoiceDate"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPlusVenorID"
+        app:layout_constraintStart_toEndOf="@+id/vendorID"
+        app:layout_constraintTop_toBottomOf="@+id/addInvoice" />
+
+    <TextView
+        android:id="@+id/invoiceDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="@string/invoiceDate"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextInvoiceDate"
+        app:layout_constraintEnd_toStartOf="@+id/editTextInvoiceDate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/vendorID"
+        app:layout_constraintTop_toTopOf="@+id/editTextInvoiceDate" />
+
+    <EditText
+        android:id="@+id/editTextInvoiceDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editTextInvoiceNum"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerVendorIdEdit"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="@+id/spinnerVendorIdEdit"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerVendorIdEdit" />
+
+    <TextView
+        android:id="@+id/invoiceNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/invoiceNumber"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextInvoiceNum"
+        app:layout_constraintStart_toStartOf="@+id/invoiceDate"
+        app:layout_constraintTop_toTopOf="@+id/editTextInvoiceNum" />
+
+    <EditText
+        android:id="@+id/editTextInvoiceNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/switchTaxDeductibleAdd"
+        app:layout_constraintEnd_toEndOf="@+id/editTextInvoiceDate"
+        app:layout_constraintStart_toStartOf="@+id/editTextInvoiceDate"
+        app:layout_constraintTop_toBottomOf="@+id/editTextInvoiceDate" />
+
+    <TextView
+        android:id="@+id/item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerItemEdit"
+        app:layout_constraintStart_toStartOf="@+id/isTaxDeductibleText2"
+        app:layout_constraintTop_toTopOf="@+id/spinnerItemEdit" />
+
+    <TextView
+        android:id="@+id/glAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/glAccount"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerGlEdit"
+        app:layout_constraintStart_toStartOf="@+id/item"
+        app:layout_constraintTop_toTopOf="@+id/spinnerGlEdit" />
+
+    <TextView
+        android:id="@+id/totalInvoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/totalInvoice"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextInvoiceTotal"
+        app:layout_constraintStart_toStartOf="@+id/glAccount"
+        app:layout_constraintTop_toTopOf="@+id/editTextInvoiceTotal" />
+
+    <TextView
+        android:id="@+id/paymentMethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/paymentMethod"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerPaymentMethodEdit"
+        app:layout_constraintStart_toStartOf="@+id/totalInvoice"
+        app:layout_constraintTop_toTopOf="@+id/spinnerPaymentMethodEdit" />
+
+    <Button
+        android:id="@+id/buttonSaveInvoiceAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/saveButton"
+
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCancelInvoiceAdd"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCancelInvoiceAdd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonCancelInvoiceAdd" />
+
+    <Button
+        android:id="@+id/buttonCancelInvoiceAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonSaveInvoiceAdd"
+        app:layout_constraintTop_toBottomOf="@+id/buttonUploadInvoice" />
+
+    <Button
+        android:id="@+id/buttonUploadInvoice"
+        android:layout_width="38dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="32dp"
+        android:text="+"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCancelInvoiceAdd"
+        app:layout_constraintStart_toEndOf="@+id/uploadInvoice"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerPaymentMethodEdit" />
+
+    <EditText
+        android:id="@+id/editTextInvoiceTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerPaymentMethodEdit"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerGlEdit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/spinnerGlEdit"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerGlEdit" />
+
+    <Button
+        android:id="@+id/buttonPlusVenorID"
+        android:layout_width="38dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="+"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerVendorIdEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinnerVendorIdEdit"
+        app:layout_constraintTop_toTopOf="@+id/spinnerVendorIdEdit" />
+
+    <Button
+        android:id="@+id/buttonPlusItem"
+        android:layout_width="38dp"
+        android:layout_height="37dp"
+        android:text="+"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerItemEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonPlusVenorID"
+        app:layout_constraintTop_toTopOf="@+id/spinnerItemEdit" />
+
+    <Button
+        android:id="@+id/buttonPlusGLAccount"
+        android:layout_width="38dp"
+        android:layout_height="37dp"
+        android:text="+"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerGlEdit"
+        app:layout_constraintEnd_toEndOf="@+id/buttonPlusItem"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonPlusItem"
+        app:layout_constraintTop_toTopOf="@+id/spinnerGlEdit"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonPlusGLAccount2"
+        android:layout_width="38dp"
+        android:layout_height="37dp"
+        android:text="+"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerPaymentMethodEdit"
+        app:layout_constraintEnd_toEndOf="@+id/buttonPlusItem"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonPlusItem"
+        app:layout_constraintTop_toTopOf="@+id/spinnerPaymentMethodEdit"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/uploadInvoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/uploadInvoice"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonUploadInvoice"
+        app:layout_constraintStart_toStartOf="@+id/paymentMethod"
+        app:layout_constraintTop_toTopOf="@+id/buttonUploadInvoice" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

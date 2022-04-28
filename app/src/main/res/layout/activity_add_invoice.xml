@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddInvoice">
+
+
+    <!--creating button for uploading pdf-->
+
+    <Button
+        android:id="@+id/done"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="618dp"
+        android:text="done"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <Button
+        android:id="@+id/pdfupload"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="100dp"
+        android:text="Upload PDF"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <!--creating button for taking photo-->
+    <Button
+        android:id="@+id/fileUpload"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="238dp"
+        android:text="take photo"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!--will show photo here-->
+    <ImageView
+        android:id="@+id/invoiceTaken"
+        android:layout_width="143dp"
+        android:layout_height="137dp"
+        android:layout_below="@+id/fileUpload"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="109dp"
+        android:layout_marginBottom="136dp"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+    <TextView
+        android:id="@+id/pdffile"
+        android:layout_width="245dp"
+        android:layout_height="39dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="81dp"
+        android:text="No PDF chosen"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/photofile"
+        android:layout_width="245dp"
+        android:layout_height="39dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="84dp"
+        android:text="No photo taken."
+        android:textAlignment="center"
+
+        />
+
+</RelativeLayout>

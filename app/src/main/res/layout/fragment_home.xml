@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:backgroundTint="#00FFFFFF"
+    android:backgroundTintMode="src_over"
+    android:orientation="horizontal"
+    tools:context=".HomeFragment">
+    <Button
+        android:id="@+id/buttonHomeCalender"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="180dp"
+        android:backgroundTint="@color/buttonBackground"
+        android:text="@string/calenderButton"
+        android:textColor="@color/buttonText"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonHomeSalestax"
+        app:strokeColor="#1616E6"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/buttonHomeInvoices"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/buttonBackground"
+        android:text="@string/invoicesButton"
+        android:textColor="@color/buttonText"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonHomeEmployees"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#1616E6"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/buttonHomeSalestax"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/buttonBackground"
+        android:text="@string/salesTaxButton"
+        android:textColor="@color/buttonText"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonHomeCalender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonHomePayroll"
+        app:strokeColor="#1616E6"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/buttonHomeEmployees"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/buttonBackground"
+        android:text="@string/employeesButton"
+        android:textColor="@color/buttonText"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonHomePayroll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonHomeInvoices"
+        app:strokeColor="#1616E6"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/buttonHomePayroll"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/buttonBackground"
+        android:text="@string/payrollButton"
+        android:textColor="@color/buttonText"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonHomeSalestax"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonHomeEmployees"
+        app:strokeColor="#1616E6"
+        app:strokeWidth="2dp" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:contentDescription="icon of a text message"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/stat_notify_chat" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/accountantButton"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:srcCompat="@drawable/ic_launcher_foreground"
+
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/fab"
+        app:layout_constraintBottom_toBottomOf="@+id/fab"
+        app:layout_constraintEnd_toEndOf="@+id/fab"
+
+        />
+    <TextView
+        android:id="@+id/accountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Message Accountant"
+        app:layout_constraintBottom_toBottomOf="@+id/accountantButton"
+        app:layout_constraintEnd_toStartOf="@+id/accountantButton"
+        app:layout_constraintTop_toTopOf="@+id/accountantButton" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/customerSupport"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:srcCompat="@drawable/ic_launcher_foreground"
+
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/accountantButton"
+        app:layout_constraintBottom_toBottomOf="@+id/accountantButton"
+        app:layout_constraintEnd_toEndOf="@+id/accountantButton"
+
+        />
+    <TextView
+        android:id="@+id/customerSupportText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Contact Support"
+        app:layout_constraintBottom_toBottomOf="@+id/customerSupport"
+        app:layout_constraintEnd_toStartOf="@+id/customerSupport"
+        app:layout_constraintTop_toTopOf="@+id/customerSupport" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

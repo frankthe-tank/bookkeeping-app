@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startUpFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.example.bookkeepingking.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_calendarFragment"
+            app:destination="@id/calendarFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_employeesFragment"
+            app:destination="@id/employeesFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_invoicesFragment"
+            app:destination="@id/invoicesFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_payrollFragment"
+            app:destination="@id/payrollFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_invoicesFragment3"
+            app:destination="@id/invoicesFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_salesTaxFragment"
+            app:destination="@id/salesTaxFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.bookkeepingking.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" >
+        <action
+            android:id="@+id/action_calendarFragment_to_FirstFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/employeesFragment"
+        android:name="com.example.bookkeepingking.EmployeesFragment"
+        android:label="fragment_employees"
+        tools:layout="@layout/fragment_employees" >
+        <action
+            android:id="@+id/action_employeesFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+        <action
+            android:id="@+id/action_employeesFragment_to_addEmployeeFragment"
+            app:destination="@id/addEmployeeFragment" />
+        <action
+            android:id="@+id/action_employeesFragment_to_editEmployeeFragment"
+            app:destination="@id/editEmployeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/invoicesFragment"
+        android:name="com.example.bookkeepingking.InvoicesFragment"
+        android:label="fragment_invoices"
+        tools:layout="@layout/fragment_invoices" >
+
+        <action
+            android:id="@+id/action_invoicesFragment_to_fragmentInvoiceEditor"
+            app:destination="@id/editInvoiceFragment" />
+        <action
+            android:id="@+id/action_invoicesFragment_to_addInvoiceFragment"
+            app:destination="@id/addInvoiceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/payrollFragment"
+        android:name="com.example.bookkeepingking.PayrollFragment"
+        android:label="fragment_payroll"
+        tools:layout="@layout/fragment_payroll" >
+        <action
+            android:id="@+id/action_payrollFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/salesTaxFragment"
+        android:name="com.example.bookkeepingking.SalesTaxFragment"
+        android:label="fragment_sales_tax"
+        tools:layout="@layout/fragment_sales_tax" >
+        <action
+            android:id="@+id/action_salesTaxFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEmployeeFragment"
+        android:name="com.example.bookkeepingking.AddEmployeeFragment"
+        android:label="fragment_add_employee"
+        tools:layout="@layout/fragment_add_employee" >
+        <action
+            android:id="@+id/action_addEmployeeFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_HomeFragment"
+        app:destination="@id/HomeFragment" />
+    <fragment
+        android:id="@+id/editInvoiceFragment"
+        android:name="com.example.bookkeepingking.EditInvoiceFragment"
+        android:label="fragment_invoice_editor"
+        tools:layout="@layout/fragment_edit_invoice" >
+        <action
+            android:id="@+id/action_editInvoiceFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editEmployeeFragment"
+        android:name="com.example.bookkeepingking.EditEmployeeFragment"
+        android:label="EditEmployeeFragment"
+        tools:layout="@layout/fragment_edit_employee">
+        <action
+            android:id="@+id/action_editEmployeeFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addInvoiceFragment"
+        android:name="com.example.bookkeepingking.AddInvoiceFragment"
+        android:label="fragment_add_invoice"
+        tools:layout="@layout/fragment_add_invoice" >
+        <action
+            android:id="@+id/action_addInvoiceFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startUpFragment"
+        android:name="com.example.bookkeepingking.StartUpFragment"
+        android:label="fragment_start_up"
+        tools:layout="@layout/fragment_start_up" >
+        <action
+            android:id="@+id/action_startUpFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/action_startUpFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.bookkeepingking.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logInFragment_to_startUpFragment"
+            app:destination="@id/startUpFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.bookkeepingking.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_startUpFragment"
+            app:destination="@id/startUpFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.bookkeepingking.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_chatFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+</navigation>
